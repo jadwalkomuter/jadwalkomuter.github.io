@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id" manifest="cache.appcache">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>jadwalkomuter</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark navbar-fixed-top bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">jadwal<strong>komuter</strong></a>
+      </div>
+    </nav>
+    <div class="container main">
+      <h4 id="pitch">Jadwal komuter Jabodetabek. Tanpa repot, tanpa download.</h4>
+      <div class="card" id="station-picker">
+        <form>
+          <div class="card-header">
+            <input class="form-control" type="text" placeholder="Masukkan nama stasiun..." id="station-search" autocomplete="off">
+          </div>
+          <ul class="list-group list-group-flush" id="station-list"><li class="list-group-item"><a href="ancol/">Ancol</a></li><li class="list-group-item"><a href="angke/">Angke</a></li><li class="list-group-item"><a href="batuceper/">Batuceper</a></li><li class="list-group-item"><a href="bekasi/">Bekasi</a></li><li class="list-group-item"><a href="bogor/">Bogor</a></li><li class="list-group-item"><a href="bojonggede/">Bojong Gede</a></li><li class="list-group-item"><a href="bojongindah/">Bojong Indah</a></li><li class="list-group-item"><a href="buaran/">Buaran</a></li><li class="list-group-item"><a href="cakung/">Cakung</a></li><li class="list-group-item"><a href="cawang/">Cawang</a></li><li class="list-group-item"><a href="cibinong/">Cibinong</a></li><li class="list-group-item"><a href="cicayur/">Cicayur</a></li><li class="list-group-item"><a href="cikini/">Cikini</a></li><li class="list-group-item"><a href="cikoya/">Cikoya</a></li><li class="list-group-item"><a href="cilebut/">Cilebut</a></li><li class="list-group-item"><a href="cilejit/">Cilejit</a></li><li class="list-group-item"><a href="cipinang/">Cipinang</a></li><li class="list-group-item"><a href="cisauk/">Cisauk</a></li><li class="list-group-item"><a href="citayam/">Citayam</a></li><li class="list-group-item"><a href="daru/">Daru</a></li><li class="list-group-item"><a href="depok/">Depok</a></li><li class="list-group-item"><a href="depokbaru/">Depok Baru</a></li><li class="list-group-item"><a href="durenkalibata/">Duren Kalibata</a></li><li class="list-group-item"><a href="duri/">Duri</a></li><li class="list-group-item"><a href="gambir/">Gambir</a></li><li class="list-group-item"><a href="gangsentiong/">Gang Sentiong</a></li><li class="list-group-item"><a href="gondangdia/">Gondangdia</a></li><li class="list-group-item"><a href="grogol/">Grogol</a></li><li class="list-group-item"><a href="jakartakota/">Jakarta Kota</a></li><li class="list-group-item"><a href="jatinegara/">Jatinegara</a></li><li class="list-group-item"><a href="jayakarta/">Jayakarta</a></li><li class="list-group-item"><a href="juanda/">Juanda</a></li><li class="list-group-item"><a href="jurangmangu/">Jurangmangu</a></li><li class="list-group-item"><a href="kalideres/">Kalideres</a></li><li class="list-group-item"><a href="kampungbandan/">Kampung Bandan</a></li><li class="list-group-item"><a href="karet/">Karet</a></li><li class="list-group-item"><a href="kebayoran/">Kebayoran</a></li><li class="list-group-item"><a href="kemayoran/">Kemayoran</a></li><li class="list-group-item"><a href="klender/">Klender</a></li><li class="list-group-item"><a href="klenderbaru/">Klenderbaru</a></li><li class="list-group-item"><a href="kramat/">Kramat</a></li><li class="list-group-item"><a href="kranji/">Kranji</a></li><li class="list-group-item"><a href="lentengagung/">Lenteng Agung</a></li><li class="list-group-item"><a href="maja/">Maja</a></li><li class="list-group-item"><a href="manggabesar/">Mangga Besar</a></li><li class="list-group-item"><a href="manggarai/">Manggarai</a></li><li class="list-group-item"><a href="nambo/">Nambo</a></li><li class="list-group-item"><a href="palmerah/">Palmerah</a></li><li class="list-group-item"><a href="parungpanjang/">Parung Panjang</a></li><li class="list-group-item"><a href="pasarminggu/">Pasar Minggu</a></li><li class="list-group-item"><a href="pasarminggubaru/">Pasar Minggu Baru</a></li><li class="list-group-item"><a href="pasarsenen/">Pasar Senen</a></li><li class="list-group-item"><a href="pesing/">Pesing</a></li><li class="list-group-item"><a href="pondokcina/">Pondok Cina</a></li><li class="list-group-item"><a href="pondokjati/">Pondok Jati</a></li><li class="list-group-item"><a href="pondokranji/">Pondok Ranji</a></li><li class="list-group-item"><a href="poris/">Poris</a></li><li class="list-group-item"><a href="rajawali/">Rajawali</a></li><li class="list-group-item"><a href="rawabuaya/">Rawa Buaya</a></li><li class="list-group-item"><a href="rawabuntu/">Rawa Buntu</a></li><li class="list-group-item"><a href="sawahbesar/">Sawah Besar</a></li><li class="list-group-item"><a href="serpong/">Serpong</a></li><li class="list-group-item"><a href="sudimara/">Sudimara</a></li><li class="list-group-item"><a href="sudirman/">Sudirman</a></li><li class="list-group-item"><a href="tamankota/">Taman Kota</a></li><li class="list-group-item"><a href="tanahabang/">Tanah Abang</a></li><li class="list-group-item"><a href="tanahtinggi/">Tanah Tinggi</a></li><li class="list-group-item"><a href="tangerang/">Tangerang</a></li><li class="list-group-item"><a href="tanjungbarat/">Tanjung Barat</a></li><li class="list-group-item"><a href="tanjungpriuk/">Tanjung Priuk</a></li><li class="list-group-item"><a href="tebet/">Tebet</a></li><li class="list-group-item"><a href="tenjo/">Tenjo</a></li><li class="list-group-item"><a href="tigaraksa/">Tigaraksa</a></li><li class="list-group-item"><a href="universitasindonesia/">Universitas Indonesia</a></li><li class="list-group-item"><a href="universitaspancasila/">Universitas Pancasila</a></li></ul>
+        </form>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
