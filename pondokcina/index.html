@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="id" manifest="../cache.appcache">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Pondok Cina | jadwalkomuter</title>
+  </head>
+  <body data-station-key="POC">
+    <nav class="navbar navbar-dark navbar-fixed-top bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">jadwal<strong>komuter</strong></a>
+      </div>
+    </nav>
+    <div class="container main">
+      <div class="timetable-title">
+        <h1>Pondok Cina</h1>
+      </div>
+
+      <div class="row">
+        <aside class="col-md-6 col-lg-4 col-xs-12 station-toggle-container">
+          <div class="card" id="destination-selector">
+            <form>
+              <div class="card-header">
+                Pilih stasiun tujuan:
+              </div>
+              <ul class="list-group list-group-flush" id="destination-toggles">
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="AK"> Angke</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="BOO"> Bogor</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="DP"> Depok</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="DU"> Duri</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="JAK"> Jakarta Kota</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="JNG"> Jatinegara</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="KPB"> Kampung Bandan</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="MRI"> Manggarai</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="NMO"> Nambo</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="THB"> Tanah Abang</label>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </aside>
+
+        <div class="col-md-6 col-lg-8 col-xs-12 ">
+          <table class="table" id="timetable">
+            <thead>
+              <tr>
+                <th class="time">Waktu</th>
+                <th class="dest">Tujuan</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td colspan="2" id="show-previous">Tampilkan selengkapnya</td>
+            </tr>
+            </tbody>
+            <tbody id="upcoming">
+              <tr data-time="00:00" data-destination="BOO" class="departure">
+                <td class="time">00:00</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="00:00" data-destination="BOO" class="departure">
+                <td class="time">00:00</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="00:14" data-destination="BOO" class="departure">
+                <td class="time">00:14</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="00:37" data-destination="BOO" class="departure">
+                <td class="time">00:37</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="00:57" data-destination="BOO" class="departure">
+                <td class="time">00:57</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="04:32" data-destination="KPB" class="departure">
+                <td class="time">04:32</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="04:37" data-destination="JAK" class="departure">
+                <td class="time">04:37</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="04:42" data-destination="AK" class="departure">
+                <td class="time">04:42</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="04:47" data-destination="JAK" class="departure">
+                <td class="time">04:47</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="04:52" data-destination="KPB" class="departure">
+                <td class="time">04:52</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="04:57" data-destination="JAK" class="departure">
+                <td class="time">04:57</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="05:02" data-destination="AK" class="departure">
+                <td class="time">05:02</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="05:07" data-destination="JAK" class="departure">
+                <td class="time">05:07</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="05:12" data-destination="KPB" class="departure">
+                <td class="time">05:12</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="05:17" data-destination="JAK" class="departure">
+                <td class="time">05:17</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="05:22" data-destination="AK" class="departure">
+                <td class="time">05:22</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="05:27" data-destination="JAK" class="departure">
+                <td class="time">05:27</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="05:29" data-destination="BOO" class="departure">
+                <td class="time">05:29</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="05:32" data-destination="KPB" class="departure">
+                <td class="time">05:32</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="05:37" data-destination="JAK" class="departure">
+                <td class="time">05:37</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="05:42" data-destination="JAK" class="departure">
+                <td class="time">05:42</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="05:47" data-destination="KPB" class="departure">
+                <td class="time">05:47</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="05:52" data-destination="JAK" class="departure">
+                <td class="time">05:52</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="05:57" data-destination="AK" class="departure">
+                <td class="time">05:57</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="05:57" data-destination="BOO" class="departure">
+                <td class="time">05:57</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="06:02" data-destination="JAK" class="departure">
+                <td class="time">06:02</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="06:07" data-destination="KPB" class="departure">
+                <td class="time">06:07</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="06:11" data-destination="BOO" class="departure">
+                <td class="time">06:11</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="06:12" data-destination="JAK" class="departure">
+                <td class="time">06:12</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="06:17" data-destination="AK" class="departure">
+                <td class="time">06:17</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="06:22" data-destination="JAK" class="departure">
+                <td class="time">06:22</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="06:24" data-destination="BOO" class="departure">
+                <td class="time">06:24</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="06:27" data-destination="KPB" class="departure">
+                <td class="time">06:27</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="06:31" data-destination="JAK" class="departure">
+                <td class="time">06:31</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="06:32" data-destination="BOO" class="departure">
+                <td class="time">06:32</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="06:37" data-destination="BOO" class="departure">
+                <td class="time">06:37</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="06:37" data-destination="JAK" class="departure">
+                <td class="time">06:37</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="06:42" data-destination="KPB" class="departure">
+                <td class="time">06:42</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="06:43" data-destination="DP" class="departure">
+                <td class="time">06:43</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="06:47" data-destination="JAK" class="departure">
+                <td class="time">06:47</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="06:47" data-destination="BOO" class="departure">
+                <td class="time">06:47</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="06:52" data-destination="JAK" class="departure">
+                <td class="time">06:52</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="06:57" data-destination="KPB" class="departure">
+                <td class="time">06:57</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="06:57" data-destination="DP" class="departure">
+                <td class="time">06:57</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="07:02" data-destination="JAK" class="departure">
+                <td class="time">07:02</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="07:02" data-destination="BOO" class="departure">
+                <td class="time">07:02</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="07:07" data-destination="BOO" class="departure">
+                <td class="time">07:07</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="07:07" data-destination="JAK" class="departure">
+                <td class="time">07:07</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="07:12" data-destination="KPB" class="departure">
+                <td class="time">07:12</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="07:13" data-destination="BOO" class="departure">
+                <td class="time">07:13</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="07:17" data-destination="JAK" class="departure">
+                <td class="time">07:17</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="07:18" data-destination="BOO" class="departure">
+                <td class="time">07:18</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="07:22" data-destination="JAK" class="departure">
+                <td class="time">07:22</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="07:23" data-destination="DP" class="departure">
+                <td class="time">07:23</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="07:27" data-destination="KPB" class="departure">
+                <td class="time">07:27</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="07:28" data-destination="BOO" class="departure">
+                <td class="time">07:28</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="07:32" data-destination="JAK" class="departure">
+                <td class="time">07:32</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="07:33" data-destination="BOO" class="departure">
+                <td class="time">07:33</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="07:37" data-destination="JAK" class="departure">
+                <td class="time">07:37</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="07:38" data-destination="BOO" class="departure">
+                <td class="time">07:38</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="07:42" data-destination="KPB" class="departure">
+                <td class="time">07:42</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="07:43" data-destination="DP" class="departure">
+                <td class="time">07:43</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="07:48" data-destination="JAK" class="departure">
+                <td class="time">07:48</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="07:48" data-destination="BOO" class="departure">
+                <td class="time">07:48</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="07:53" data-destination="DP" class="departure">
+                <td class="time">07:53</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="07:53" data-destination="JAK" class="departure">
+                <td class="time">07:53</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="07:57" data-destination="NMO" class="departure">
+                <td class="time">07:57</td>
+                <td class="dest">Nambo</td>
+              </tr>
+              <tr data-time="07:58" data-destination="AK" class="departure">
+                <td class="time">07:58</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="08:01" data-destination="BOO" class="departure">
+                <td class="time">08:01</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="08:03" data-destination="JAK" class="departure">
+                <td class="time">08:03</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="08:09" data-destination="BOO" class="departure">
+                <td class="time">08:09</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="08:10" data-destination="KPB" class="departure">
+                <td class="time">08:10</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="08:13" data-destination="DP" class="departure">
+                <td class="time">08:13</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="08:14" data-destination="JAK" class="departure">
+                <td class="time">08:14</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="08:17" data-destination="BOO" class="departure">
+                <td class="time">08:17</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="08:19" data-destination="JAK" class="departure">
+                <td class="time">08:19</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="08:21" data-destination="BOO" class="departure">
+                <td class="time">08:21</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="08:23" data-destination="AK" class="departure">
+                <td class="time">08:23</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="08:25" data-destination="BOO" class="departure">
+                <td class="time">08:25</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="08:28" data-destination="KPB" class="departure">
+                <td class="time">08:28</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="08:29" data-destination="DP" class="departure">
+                <td class="time">08:29</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="08:33" data-destination="JAK" class="departure">
+                <td class="time">08:33</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="08:33" data-destination="DP" class="departure">
+                <td class="time">08:33</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="08:37" data-destination="AK" class="departure">
+                <td class="time">08:37</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="08:43" data-destination="JAK" class="departure">
+                <td class="time">08:43</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="08:44" data-destination="BOO" class="departure">
+                <td class="time">08:44</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="08:48" data-destination="DP" class="departure">
+                <td class="time">08:48</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="08:49" data-destination="JAK" class="departure">
+                <td class="time">08:49</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="08:52" data-destination="BOO" class="departure">
+                <td class="time">08:52</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="08:54" data-destination="KPB" class="departure">
+                <td class="time">08:54</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="08:57" data-destination="BOO" class="departure">
+                <td class="time">08:57</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="08:58" data-destination="JAK" class="departure">
+                <td class="time">08:58</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="09:03" data-destination="DU" class="departure">
+                <td class="time">09:03</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="09:08" data-destination="BOO" class="departure">
+                <td class="time">09:08</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="09:09" data-destination="JAK" class="departure">
+                <td class="time">09:09</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="09:12" data-destination="DP" class="departure">
+                <td class="time">09:12</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="09:15" data-destination="JAK" class="departure">
+                <td class="time">09:15</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="09:20" data-destination="KPB" class="departure">
+                <td class="time">09:20</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="09:20" data-destination="BOO" class="departure">
+                <td class="time">09:20</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="09:24" data-destination="DP" class="departure">
+                <td class="time">09:24</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="09:25" data-destination="JAK" class="departure">
+                <td class="time">09:25</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="09:28" data-destination="BOO" class="departure">
+                <td class="time">09:28</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="09:30" data-destination="DU" class="departure">
+                <td class="time">09:30</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="09:34" data-destination="BOO" class="departure">
+                <td class="time">09:34</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="09:37" data-destination="JAK" class="departure">
+                <td class="time">09:37</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="09:40" data-destination="DP" class="departure">
+                <td class="time">09:40</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="09:42" data-destination="KPB" class="departure">
+                <td class="time">09:42</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="09:44" data-destination="BOO" class="departure">
+                <td class="time">09:44</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="09:46" data-destination="JAK" class="departure">
+                <td class="time">09:46</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="09:51" data-destination="BOO" class="departure">
+                <td class="time">09:51</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="09:52" data-destination="DU" class="departure">
+                <td class="time">09:52</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="09:56" data-destination="BOO" class="departure">
+                <td class="time">09:56</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="09:57" data-destination="JAK" class="departure">
+                <td class="time">09:57</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="10:00" data-destination="BOO" class="departure">
+                <td class="time">10:00</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="10:02" data-destination="KPB" class="departure">
+                <td class="time">10:02</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="10:05" data-destination="BOO" class="departure">
+                <td class="time">10:05</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="10:08" data-destination="JAK" class="departure">
+                <td class="time">10:08</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="10:10" data-destination="BOO" class="departure">
+                <td class="time">10:10</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="10:14" data-destination="AK" class="departure">
+                <td class="time">10:14</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="10:15" data-destination="DP" class="departure">
+                <td class="time">10:15</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="10:19" data-destination="BOO" class="departure">
+                <td class="time">10:19</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="10:19" data-destination="JAK" class="departure">
+                <td class="time">10:19</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="10:24" data-destination="KPB" class="departure">
+                <td class="time">10:24</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="10:25" data-destination="BOO" class="departure">
+                <td class="time">10:25</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="10:29" data-destination="BOO" class="departure">
+                <td class="time">10:29</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="10:30" data-destination="JAK" class="departure">
+                <td class="time">10:30</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="10:33" data-destination="BOO" class="departure">
+                <td class="time">10:33</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="10:35" data-destination="AK" class="departure">
+                <td class="time">10:35</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="10:40" data-destination="JAK" class="departure">
+                <td class="time">10:40</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="10:40" data-destination="DP" class="departure">
+                <td class="time">10:40</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="10:44" data-destination="BOO" class="departure">
+                <td class="time">10:44</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="10:45" data-destination="JAK" class="departure">
+                <td class="time">10:45</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="10:48" data-destination="BOO" class="departure">
+                <td class="time">10:48</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="10:51" data-destination="KPB" class="departure">
+                <td class="time">10:51</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="10:53" data-destination="BOO" class="departure">
+                <td class="time">10:53</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="10:55" data-destination="JAK" class="departure">
+                <td class="time">10:55</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="10:57" data-destination="BOO" class="departure">
+                <td class="time">10:57</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="11:00" data-destination="AK" class="departure">
+                <td class="time">11:00</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="11:01" data-destination="BOO" class="departure">
+                <td class="time">11:01</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="11:04" data-destination="JAK" class="departure">
+                <td class="time">11:04</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="11:05" data-destination="BOO" class="departure">
+                <td class="time">11:05</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="11:11" data-destination="DP" class="departure">
+                <td class="time">11:11</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="11:12" data-destination="KPB" class="departure">
+                <td class="time">11:12</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="11:15" data-destination="BOO" class="departure">
+                <td class="time">11:15</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="11:17" data-destination="JAK" class="departure">
+                <td class="time">11:17</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="11:19" data-destination="BOO" class="departure">
+                <td class="time">11:19</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="11:22" data-destination="JAK" class="departure">
+                <td class="time">11:22</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="11:24" data-destination="NMO" class="departure">
+                <td class="time">11:24</td>
+                <td class="dest">Nambo</td>
+              </tr>
+              <tr data-time="11:27" data-destination="AK" class="departure">
+                <td class="time">11:27</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="11:30" data-destination="BOO" class="departure">
+                <td class="time">11:30</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="11:35" data-destination="JAK" class="departure">
+                <td class="time">11:35</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="11:36" data-destination="BOO" class="departure">
+                <td class="time">11:36</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="11:41" data-destination="JAK" class="departure">
+                <td class="time">11:41</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="11:44" data-destination="BOO" class="departure">
+                <td class="time">11:44</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="11:46" data-destination="KPB" class="departure">
+                <td class="time">11:46</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="11:50" data-destination="BOO" class="departure">
+                <td class="time">11:50</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="11:52" data-destination="JAK" class="departure">
+                <td class="time">11:52</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="11:56" data-destination="BOO" class="departure">
+                <td class="time">11:56</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="11:59" data-destination="AK" class="departure">
+                <td class="time">11:59</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="12:00" data-destination="BOO" class="departure">
+                <td class="time">12:00</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="12:04" data-destination="JAK" class="departure">
+                <td class="time">12:04</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="12:06" data-destination="BOO" class="departure">
+                <td class="time">12:06</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="12:09" data-destination="KPB" class="departure">
+                <td class="time">12:09</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="12:10" data-destination="BOO" class="departure">
+                <td class="time">12:10</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="12:15" data-destination="BOO" class="departure">
+                <td class="time">12:15</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="12:16" data-destination="JAK" class="departure">
+                <td class="time">12:16</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="12:21" data-destination="AK" class="departure">
+                <td class="time">12:21</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="12:23" data-destination="BOO" class="departure">
+                <td class="time">12:23</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="12:26" data-destination="JAK" class="departure">
+                <td class="time">12:26</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="12:28" data-destination="BOO" class="departure">
+                <td class="time">12:28</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="12:31" data-destination="JNG" class="departure">
+                <td class="time">12:31</td>
+                <td class="dest">Jatinegara</td>
+              </tr>
+              <tr data-time="12:32" data-destination="DP" class="departure">
+                <td class="time">12:32</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="12:35" data-destination="JAK" class="departure">
+                <td class="time">12:35</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="12:36" data-destination="BOO" class="departure">
+                <td class="time">12:36</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="12:40" data-destination="AK" class="departure">
+                <td class="time">12:40</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="12:40" data-destination="BOO" class="departure">
+                <td class="time">12:40</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="12:44" data-destination="BOO" class="departure">
+                <td class="time">12:44</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="12:46" data-destination="JAK" class="departure">
+                <td class="time">12:46</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="12:48" data-destination="BOO" class="departure">
+                <td class="time">12:48</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="12:52" data-destination="JAK" class="departure">
+                <td class="time">12:52</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="12:52" data-destination="BOO" class="departure">
+                <td class="time">12:52</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="12:57" data-destination="KPB" class="departure">
+                <td class="time">12:57</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="12:57" data-destination="BOO" class="departure">
+                <td class="time">12:57</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="13:01" data-destination="BOO" class="departure">
+                <td class="time">13:01</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="13:02" data-destination="AK" class="departure">
+                <td class="time">13:02</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="13:06" data-destination="BOO" class="departure">
+                <td class="time">13:06</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="13:07" data-destination="JAK" class="departure">
+                <td class="time">13:07</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="13:10" data-destination="BOO" class="departure">
+                <td class="time">13:10</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="13:12" data-destination="KPB" class="departure">
+                <td class="time">13:12</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="13:17" data-destination="JAK" class="departure">
+                <td class="time">13:17</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="13:17" data-destination="BOO" class="departure">
+                <td class="time">13:17</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="13:22" data-destination="AK" class="departure">
+                <td class="time">13:22</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="13:24" data-destination="BOO" class="departure">
+                <td class="time">13:24</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="13:26" data-destination="JAK" class="departure">
+                <td class="time">13:26</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="13:29" data-destination="BOO" class="departure">
+                <td class="time">13:29</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="13:33" data-destination="BOO" class="departure">
+                <td class="time">13:33</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="13:34" data-destination="KPB" class="departure">
+                <td class="time">13:34</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="13:39" data-destination="JAK" class="departure">
+                <td class="time">13:39</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="13:39" data-destination="BOO" class="departure">
+                <td class="time">13:39</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="13:44" data-destination="AK" class="departure">
+                <td class="time">13:44</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="13:45" data-destination="BOO" class="departure">
+                <td class="time">13:45</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="13:50" data-destination="JAK" class="departure">
+                <td class="time">13:50</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="13:51" data-destination="BOO" class="departure">
+                <td class="time">13:51</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="13:55" data-destination="KPB" class="departure">
+                <td class="time">13:55</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="13:57" data-destination="BOO" class="departure">
+                <td class="time">13:57</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="14:00" data-destination="JAK" class="departure">
+                <td class="time">14:00</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="14:04" data-destination="BOO" class="departure">
+                <td class="time">14:04</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="14:09" data-destination="BOO" class="departure">
+                <td class="time">14:09</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="14:12" data-destination="AK" class="departure">
+                <td class="time">14:12</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="14:16" data-destination="BOO" class="departure">
+                <td class="time">14:16</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="14:16" data-destination="JAK" class="departure">
+                <td class="time">14:16</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="14:21" data-destination="BOO" class="departure">
+                <td class="time">14:21</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="14:22" data-destination="JAK" class="departure">
+                <td class="time">14:22</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="14:27" data-destination="KPB" class="departure">
+                <td class="time">14:27</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="14:29" data-destination="BOO" class="departure">
+                <td class="time">14:29</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="14:32" data-destination="AK" class="departure">
+                <td class="time">14:32</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="14:34" data-destination="BOO" class="departure">
+                <td class="time">14:34</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="14:37" data-destination="JAK" class="departure">
+                <td class="time">14:37</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="14:40" data-destination="BOO" class="departure">
+                <td class="time">14:40</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="14:41" data-destination="KPB" class="departure">
+                <td class="time">14:41</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="14:45" data-destination="BOO" class="departure">
+                <td class="time">14:45</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="14:49" data-destination="BOO" class="departure">
+                <td class="time">14:49</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="14:49" data-destination="JAK" class="departure">
+                <td class="time">14:49</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="14:53" data-destination="BOO" class="departure">
+                <td class="time">14:53</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="14:55" data-destination="AK" class="departure">
+                <td class="time">14:55</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="14:59" data-destination="NMO" class="departure">
+                <td class="time">14:59</td>
+                <td class="dest">Nambo</td>
+              </tr>
+              <tr data-time="15:01" data-destination="JAK" class="departure">
+                <td class="time">15:01</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="15:05" data-destination="BOO" class="departure">
+                <td class="time">15:05</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="15:07" data-destination="KPB" class="departure">
+                <td class="time">15:07</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="15:12" data-destination="BOO" class="departure">
+                <td class="time">15:12</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="15:12" data-destination="JAK" class="departure">
+                <td class="time">15:12</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="15:17" data-destination="AK" class="departure">
+                <td class="time">15:17</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="15:18" data-destination="BOO" class="departure">
+                <td class="time">15:18</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="15:22" data-destination="JAK" class="departure">
+                <td class="time">15:22</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="15:24" data-destination="BOO" class="departure">
+                <td class="time">15:24</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="15:27" data-destination="KPB" class="departure">
+                <td class="time">15:27</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="15:29" data-destination="BOO" class="departure">
+                <td class="time">15:29</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="15:32" data-destination="JAK" class="departure">
+                <td class="time">15:32</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="15:38" data-destination="BOO" class="departure">
+                <td class="time">15:38</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="15:38" data-destination="JAK" class="departure">
+                <td class="time">15:38</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="15:42" data-destination="BOO" class="departure">
+                <td class="time">15:42</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="15:43" data-destination="AK" class="departure">
+                <td class="time">15:43</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="15:46" data-destination="BOO" class="departure">
+                <td class="time">15:46</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="15:49" data-destination="KPB" class="departure">
+                <td class="time">15:49</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="15:50" data-destination="BOO" class="departure">
+                <td class="time">15:50</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="15:54" data-destination="JAK" class="departure">
+                <td class="time">15:54</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="15:55" data-destination="BOO" class="departure">
+                <td class="time">15:55</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="15:58" data-destination="DU" class="departure">
+                <td class="time">15:58</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="15:59" data-destination="BOO" class="departure">
+                <td class="time">15:59</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="16:04" data-destination="AK" class="departure">
+                <td class="time">16:04</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="16:04" data-destination="BOO" class="departure">
+                <td class="time">16:04</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="16:09" data-destination="KPB" class="departure">
+                <td class="time">16:09</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="16:10" data-destination="BOO" class="departure">
+                <td class="time">16:10</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="16:14" data-destination="JAK" class="departure">
+                <td class="time">16:14</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="16:15" data-destination="BOO" class="departure">
+                <td class="time">16:15</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="16:18" data-destination="JAK" class="departure">
+                <td class="time">16:18</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="16:19" data-destination="BOO" class="departure">
+                <td class="time">16:19</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="16:22" data-destination="THB" class="departure">
+                <td class="time">16:22</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="16:24" data-destination="BOO" class="departure">
+                <td class="time">16:24</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="16:27" data-destination="KPB" class="departure">
+                <td class="time">16:27</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="16:30" data-destination="BOO" class="departure">
+                <td class="time">16:30</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="16:31" data-destination="JAK" class="departure">
+                <td class="time">16:31</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="16:35" data-destination="AK" class="departure">
+                <td class="time">16:35</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="16:35" data-destination="BOO" class="departure">
+                <td class="time">16:35</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="16:40" data-destination="KPB" class="departure">
+                <td class="time">16:40</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="16:40" data-destination="BOO" class="departure">
+                <td class="time">16:40</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="16:45" data-destination="JAK" class="departure">
+                <td class="time">16:45</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="16:46" data-destination="BOO" class="departure">
+                <td class="time">16:46</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="16:50" data-destination="JAK" class="departure">
+                <td class="time">16:50</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="16:52" data-destination="BOO" class="departure">
+                <td class="time">16:52</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="16:57" data-destination="AK" class="departure">
+                <td class="time">16:57</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="16:57" data-destination="BOO" class="departure">
+                <td class="time">16:57</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="17:01" data-destination="JAK" class="departure">
+                <td class="time">17:01</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="17:03" data-destination="BOO" class="departure">
+                <td class="time">17:03</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="17:06" data-destination="KPB" class="departure">
+                <td class="time">17:06</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="17:08" data-destination="BOO" class="departure">
+                <td class="time">17:08</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="17:11" data-destination="JAK" class="departure">
+                <td class="time">17:11</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="17:14" data-destination="BOO" class="departure">
+                <td class="time">17:14</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="17:16" data-destination="AK" class="departure">
+                <td class="time">17:16</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="17:19" data-destination="BOO" class="departure">
+                <td class="time">17:19</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="17:21" data-destination="JAK" class="departure">
+                <td class="time">17:21</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="17:26" data-destination="KPB" class="departure">
+                <td class="time">17:26</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="17:29" data-destination="BOO" class="departure">
+                <td class="time">17:29</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="17:31" data-destination="JAK" class="departure">
+                <td class="time">17:31</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="17:33" data-destination="BOO" class="departure">
+                <td class="time">17:33</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="17:38" data-destination="BOO" class="departure">
+                <td class="time">17:38</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="17:39" data-destination="AK" class="departure">
+                <td class="time">17:39</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="17:43" data-destination="BOO" class="departure">
+                <td class="time">17:43</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="17:45" data-destination="JAK" class="departure">
+                <td class="time">17:45</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="17:50" data-destination="KPB" class="departure">
+                <td class="time">17:50</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="17:53" data-destination="BOO" class="departure">
+                <td class="time">17:53</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="17:55" data-destination="JAK" class="departure">
+                <td class="time">17:55</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="17:59" data-destination="BOO" class="departure">
+                <td class="time">17:59</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="18:01" data-destination="JAK" class="departure">
+                <td class="time">18:01</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="18:04" data-destination="BOO" class="departure">
+                <td class="time">18:04</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="18:07" data-destination="AK" class="departure">
+                <td class="time">18:07</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="18:09" data-destination="BOO" class="departure">
+                <td class="time">18:09</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="18:14" data-destination="KPB" class="departure">
+                <td class="time">18:14</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="18:14" data-destination="BOO" class="departure">
+                <td class="time">18:14</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="18:18" data-destination="BOO" class="departure">
+                <td class="time">18:18</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="18:19" data-destination="JAK" class="departure">
+                <td class="time">18:19</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="18:24" data-destination="JAK" class="departure">
+                <td class="time">18:24</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="18:28" data-destination="BOO" class="departure">
+                <td class="time">18:28</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="18:29" data-destination="AK" class="departure">
+                <td class="time">18:29</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="18:32" data-destination="NMO" class="departure">
+                <td class="time">18:32</td>
+                <td class="dest">Nambo</td>
+              </tr>
+              <tr data-time="18:34" data-destination="JAK" class="departure">
+                <td class="time">18:34</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="18:36" data-destination="BOO" class="departure">
+                <td class="time">18:36</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="18:39" data-destination="KPB" class="departure">
+                <td class="time">18:39</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="18:42" data-destination="BOO" class="departure">
+                <td class="time">18:42</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="18:44" data-destination="JAK" class="departure">
+                <td class="time">18:44</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="18:48" data-destination="BOO" class="departure">
+                <td class="time">18:48</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="18:49" data-destination="JAK" class="departure">
+                <td class="time">18:49</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="18:54" data-destination="AK" class="departure">
+                <td class="time">18:54</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="18:54" data-destination="BOO" class="departure">
+                <td class="time">18:54</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="18:58" data-destination="BOO" class="departure">
+                <td class="time">18:58</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="19:00" data-destination="KPB" class="departure">
+                <td class="time">19:00</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="19:02" data-destination="BOO" class="departure">
+                <td class="time">19:02</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="19:06" data-destination="JAK" class="departure">
+                <td class="time">19:06</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="19:08" data-destination="BOO" class="departure">
+                <td class="time">19:08</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="19:13" data-destination="BOO" class="departure">
+                <td class="time">19:13</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="19:14" data-destination="AK" class="departure">
+                <td class="time">19:14</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="19:17" data-destination="BOO" class="departure">
+                <td class="time">19:17</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="19:20" data-destination="JAK" class="departure">
+                <td class="time">19:20</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="19:21" data-destination="BOO" class="departure">
+                <td class="time">19:21</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="19:27" data-destination="BOO" class="departure">
+                <td class="time">19:27</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="19:29" data-destination="KPB" class="departure">
+                <td class="time">19:29</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="19:31" data-destination="DP" class="departure">
+                <td class="time">19:31</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="19:35" data-destination="BOO" class="departure">
+                <td class="time">19:35</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="19:35" data-destination="JAK" class="departure">
+                <td class="time">19:35</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="19:40" data-destination="BOO" class="departure">
+                <td class="time">19:40</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="19:45" data-destination="BOO" class="departure">
+                <td class="time">19:45</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="19:50" data-destination="BOO" class="departure">
+                <td class="time">19:50</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="19:51" data-destination="JAK" class="departure">
+                <td class="time">19:51</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="19:57" data-destination="KPB" class="departure">
+                <td class="time">19:57</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="19:59" data-destination="BOO" class="departure">
+                <td class="time">19:59</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="20:05" data-destination="BOO" class="departure">
+                <td class="time">20:05</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="20:10" data-destination="JAK" class="departure">
+                <td class="time">20:10</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="20:15" data-destination="BOO" class="departure">
+                <td class="time">20:15</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="20:20" data-destination="BOO" class="departure">
+                <td class="time">20:20</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="20:24" data-destination="JAK" class="departure">
+                <td class="time">20:24</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="20:25" data-destination="BOO" class="departure">
+                <td class="time">20:25</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="20:29" data-destination="AK" class="departure">
+                <td class="time">20:29</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="20:29" data-destination="BOO" class="departure">
+                <td class="time">20:29</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="20:34" data-destination="BOO" class="departure">
+                <td class="time">20:34</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="20:41" data-destination="BOO" class="departure">
+                <td class="time">20:41</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="20:42" data-destination="JAK" class="departure">
+                <td class="time">20:42</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="20:47" data-destination="BOO" class="departure">
+                <td class="time">20:47</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="20:50" data-destination="JNG" class="departure">
+                <td class="time">20:50</td>
+                <td class="dest">Jatinegara</td>
+              </tr>
+              <tr data-time="20:53" data-destination="BOO" class="departure">
+                <td class="time">20:53</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="20:55" data-destination="JAK" class="departure">
+                <td class="time">20:55</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="20:59" data-destination="BOO" class="departure">
+                <td class="time">20:59</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="21:04" data-destination="BOO" class="departure">
+                <td class="time">21:04</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="21:12" data-destination="BOO" class="departure">
+                <td class="time">21:12</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="21:13" data-destination="KPB" class="departure">
+                <td class="time">21:13</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="21:17" data-destination="BOO" class="departure">
+                <td class="time">21:17</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="21:21" data-destination="JAK" class="departure">
+                <td class="time">21:21</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="21:26" data-destination="BOO" class="departure">
+                <td class="time">21:26</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="21:31" data-destination="MRI" class="departure">
+                <td class="time">21:31</td>
+                <td class="dest">Manggarai</td>
+              </tr>
+              <tr data-time="21:36" data-destination="BOO" class="departure">
+                <td class="time">21:36</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="21:40" data-destination="JAK" class="departure">
+                <td class="time">21:40</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="21:41" data-destination="BOO" class="departure">
+                <td class="time">21:41</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="21:45" data-destination="MRI" class="departure">
+                <td class="time">21:45</td>
+                <td class="dest">Manggarai</td>
+              </tr>
+              <tr data-time="21:46" data-destination="BOO" class="departure">
+                <td class="time">21:46</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="22:02" data-destination="JAK" class="departure">
+                <td class="time">22:02</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="22:12" data-destination="DP" class="departure">
+                <td class="time">22:12</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="22:17" data-destination="BOO" class="departure">
+                <td class="time">22:17</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="22:18" data-destination="MRI" class="departure">
+                <td class="time">22:18</td>
+                <td class="dest">Manggarai</td>
+              </tr>
+              <tr data-time="22:23" data-destination="JAK" class="departure">
+                <td class="time">22:23</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="22:26" data-destination="DP" class="departure">
+                <td class="time">22:26</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="22:28" data-destination="KPB" class="departure">
+                <td class="time">22:28</td>
+                <td class="dest">Kampung Bandan</td>
+              </tr>
+              <tr data-time="22:32" data-destination="BOO" class="departure">
+                <td class="time">22:32</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="22:38" data-destination="BOO" class="departure">
+                <td class="time">22:38</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="22:47" data-destination="DP" class="departure">
+                <td class="time">22:47</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="22:52" data-destination="JAK" class="departure">
+                <td class="time">22:52</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="22:57" data-destination="MRI" class="departure">
+                <td class="time">22:57</td>
+                <td class="dest">Manggarai</td>
+              </tr>
+              <tr data-time="22:59" data-destination="BOO" class="departure">
+                <td class="time">22:59</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="23:07" data-destination="DP" class="departure">
+                <td class="time">23:07</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="23:15" data-destination="BOO" class="departure">
+                <td class="time">23:15</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="23:24" data-destination="DP" class="departure">
+                <td class="time">23:24</td>
+                <td class="dest">Depok</td>
+              </tr>
+              <tr data-time="23:37" data-destination="BOO" class="departure">
+                <td class="time">23:37</td>
+                <td class="dest">Bogor</td>
+              </tr>
+              <tr data-time="23:50" data-destination="BOO" class="departure">
+                <td class="time">23:50</td>
+                <td class="dest">Bogor</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="../js/timetable.js"></script>
+  </body>
+</html>

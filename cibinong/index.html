@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id" manifest="../cache.appcache">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Cibinong | jadwalkomuter</title>
+  </head>
+  <body data-station-key="CBN">
+    <nav class="navbar navbar-dark navbar-fixed-top bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">jadwal<strong>komuter</strong></a>
+      </div>
+    </nav>
+    <div class="container main">
+      <div class="timetable-title">
+        <h1>Cibinong</h1>
+      </div>
+
+      <div class="row">
+        <aside class="col-md-6 col-lg-4 col-xs-12 station-toggle-container">
+          <div class="card" id="destination-selector">
+            <form>
+              <div class="card-header">
+                Pilih stasiun tujuan:
+              </div>
+              <ul class="list-group list-group-flush" id="destination-toggles">
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="AK"> Angke</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="DP"> Depok</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="DU"> Duri</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="NMO"> Nambo</label>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </aside>
+
+        <div class="col-md-6 col-lg-8 col-xs-12 ">
+          <table class="table" id="timetable">
+            <thead>
+              <tr>
+                <th class="time">Waktu</th>
+                <th class="dest">Tujuan</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td colspan="2" id="show-previous">Tampilkan selengkapnya</td>
+            </tr>
+            </tbody>
+            <tbody id="upcoming">
+              <tr data-time="04:43" data-destination="NMO" class="departure">
+                <td class="time">04:43</td>
+                <td class="dest">Nambo</td>
+              </tr>
+              <tr data-time="05:31" data-destination="AK" class="departure">
+                <td class="time">05:31</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="08:25" data-destination="NMO" class="departure">
+                <td class="time">08:25</td>
+                <td class="dest">Nambo</td>
+              </tr>
+              <tr data-time="09:04" data-destination="DU" class="departure">
+                <td class="time">09:04</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="11:51" data-destination="NMO" class="departure">
+                <td class="time">11:51</td>
+                <td class="dest">Nambo</td>
+              </tr>
+              <tr data-time="12:36" data-destination="AK" class="departure">
+                <td class="time">12:36</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="15:29" data-destination="NMO" class="departure">
+                <td class="time">15:29</td>
+                <td class="dest">Nambo</td>
+              </tr>
+              <tr data-time="16:08" data-destination="AK" class="departure">
+                <td class="time">16:08</td>
+                <td class="dest">Angke</td>
+              </tr>
+              <tr data-time="18:59" data-destination="NMO" class="departure">
+                <td class="time">18:59</td>
+                <td class="dest">Nambo</td>
+              </tr>
+              <tr data-time="19:35" data-destination="DP" class="departure">
+                <td class="time">19:35</td>
+                <td class="dest">Depok</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="../js/timetable.js"></script>
+  </body>
+</html>

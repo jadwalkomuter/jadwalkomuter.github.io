@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="id" manifest="../cache.appcache">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Cicayur | jadwalkomuter</title>
+  </head>
+  <body data-station-key="CCY">
+    <nav class="navbar navbar-dark navbar-fixed-top bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">jadwal<strong>komuter</strong></a>
+      </div>
+    </nav>
+    <div class="container main">
+      <div class="timetable-title">
+        <h1>Cicayur</h1>
+      </div>
+
+      <div class="row">
+        <aside class="col-md-6 col-lg-4 col-xs-12 station-toggle-container">
+          <div class="card" id="destination-selector">
+            <form>
+              <div class="card-header">
+                Pilih stasiun tujuan:
+              </div>
+              <ul class="list-group list-group-flush" id="destination-toggles">
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="MJ"> Maja</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="PRP"> Parung Panjang</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="SDM"> Sudimara</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="SRP"> Serpong</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="THB"> Tanah Abang</label>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </aside>
+
+        <div class="col-md-6 col-lg-8 col-xs-12 ">
+          <table class="table" id="timetable">
+            <thead>
+              <tr>
+                <th class="time">Waktu</th>
+                <th class="dest">Tujuan</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td colspan="2" id="show-previous">Tampilkan selengkapnya</td>
+            </tr>
+            </tbody>
+            <tbody id="upcoming">
+              <tr data-time="00:14" data-destination="PRP" class="departure">
+                <td class="time">00:14</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="04:26" data-destination="SDM" class="departure">
+                <td class="time">04:26</td>
+                <td class="dest">Sudimara</td>
+              </tr>
+              <tr data-time="04:37" data-destination="THB" class="departure">
+                <td class="time">04:37</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="05:07" data-destination="THB" class="departure">
+                <td class="time">05:07</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="05:26" data-destination="THB" class="departure">
+                <td class="time">05:26</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="05:37" data-destination="THB" class="departure">
+                <td class="time">05:37</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="06:14" data-destination="PRP" class="departure">
+                <td class="time">06:14</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="06:26" data-destination="THB" class="departure">
+                <td class="time">06:26</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="06:29" data-destination="PRP" class="departure">
+                <td class="time">06:29</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="06:37" data-destination="THB" class="departure">
+                <td class="time">06:37</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="06:44" data-destination="MJ" class="departure">
+                <td class="time">06:44</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="07:14" data-destination="PRP" class="departure">
+                <td class="time">07:14</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="07:17" data-destination="THB" class="departure">
+                <td class="time">07:17</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="07:27" data-destination="THB" class="departure">
+                <td class="time">07:27</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="07:29" data-destination="PRP" class="departure">
+                <td class="time">07:29</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="07:37" data-destination="THB" class="departure">
+                <td class="time">07:37</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="07:44" data-destination="MJ" class="departure">
+                <td class="time">07:44</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="08:12" data-destination="THB" class="departure">
+                <td class="time">08:12</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="08:15" data-destination="PRP" class="departure">
+                <td class="time">08:15</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="08:30" data-destination="THB" class="departure">
+                <td class="time">08:30</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="08:37" data-destination="THB" class="departure">
+                <td class="time">08:37</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="08:39" data-destination="PRP" class="departure">
+                <td class="time">08:39</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="08:51" data-destination="PRP" class="departure">
+                <td class="time">08:51</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="08:59" data-destination="MJ" class="departure">
+                <td class="time">08:59</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="09:02" data-destination="THB" class="departure">
+                <td class="time">09:02</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="09:27" data-destination="THB" class="departure">
+                <td class="time">09:27</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="09:29" data-destination="PRP" class="departure">
+                <td class="time">09:29</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="09:47" data-destination="THB" class="departure">
+                <td class="time">09:47</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="09:49" data-destination="MJ" class="departure">
+                <td class="time">09:49</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="09:57" data-destination="THB" class="departure">
+                <td class="time">09:57</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="10:07" data-destination="THB" class="departure">
+                <td class="time">10:07</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="10:29" data-destination="PRP" class="departure">
+                <td class="time">10:29</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="10:44" data-destination="PRP" class="departure">
+                <td class="time">10:44</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="10:59" data-destination="THB" class="departure">
+                <td class="time">10:59</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="11:07" data-destination="THB" class="departure">
+                <td class="time">11:07</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="11:14" data-destination="PRP" class="departure">
+                <td class="time">11:14</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="11:22" data-destination="THB" class="departure">
+                <td class="time">11:22</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="11:33" data-destination="THB" class="departure">
+                <td class="time">11:33</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="11:34" data-destination="PRP" class="departure">
+                <td class="time">11:34</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="11:44" data-destination="MJ" class="departure">
+                <td class="time">11:44</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="11:52" data-destination="THB" class="departure">
+                <td class="time">11:52</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="12:07" data-destination="THB" class="departure">
+                <td class="time">12:07</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="12:09" data-destination="PRP" class="departure">
+                <td class="time">12:09</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="12:29" data-destination="PRP" class="departure">
+                <td class="time">12:29</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="12:32" data-destination="THB" class="departure">
+                <td class="time">12:32</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="12:44" data-destination="MJ" class="departure">
+                <td class="time">12:44</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="13:07" data-destination="THB" class="departure">
+                <td class="time">13:07</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="13:19" data-destination="PRP" class="departure">
+                <td class="time">13:19</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="13:39" data-destination="THB" class="departure">
+                <td class="time">13:39</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="13:44" data-destination="MJ" class="departure">
+                <td class="time">13:44</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="13:57" data-destination="THB" class="departure">
+                <td class="time">13:57</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="14:14" data-destination="PRP" class="departure">
+                <td class="time">14:14</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="14:34" data-destination="THB" class="departure">
+                <td class="time">14:34</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="14:44" data-destination="MJ" class="departure">
+                <td class="time">14:44</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="14:47" data-destination="THB" class="departure">
+                <td class="time">14:47</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="15:14" data-destination="PRP" class="departure">
+                <td class="time">15:14</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="15:38" data-destination="THB" class="departure">
+                <td class="time">15:38</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="15:44" data-destination="MJ" class="departure">
+                <td class="time">15:44</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="15:52" data-destination="THB" class="departure">
+                <td class="time">15:52</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="15:55" data-destination="PRP" class="departure">
+                <td class="time">15:55</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="16:22" data-destination="THB" class="departure">
+                <td class="time">16:22</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="16:39" data-destination="PRP" class="departure">
+                <td class="time">16:39</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="16:47" data-destination="THB" class="departure">
+                <td class="time">16:47</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="16:54" data-destination="PRP" class="departure">
+                <td class="time">16:54</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="17:05" data-destination="MJ" class="departure">
+                <td class="time">17:05</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="17:07" data-destination="THB" class="departure">
+                <td class="time">17:07</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="17:17" data-destination="THB" class="departure">
+                <td class="time">17:17</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="17:34" data-destination="PRP" class="departure">
+                <td class="time">17:34</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="17:43" data-destination="THB" class="departure">
+                <td class="time">17:43</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="17:44" data-destination="MJ" class="departure">
+                <td class="time">17:44</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="17:56" data-destination="PRP" class="departure">
+                <td class="time">17:56</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="18:07" data-destination="THB" class="departure">
+                <td class="time">18:07</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="18:20" data-destination="THB" class="departure">
+                <td class="time">18:20</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="18:30" data-destination="PRP" class="departure">
+                <td class="time">18:30</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="18:44" data-destination="MJ" class="departure">
+                <td class="time">18:44</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="18:49" data-destination="THB" class="departure">
+                <td class="time">18:49</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="19:07" data-destination="THB" class="departure">
+                <td class="time">19:07</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="19:19" data-destination="PRP" class="departure">
+                <td class="time">19:19</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="19:32" data-destination="THB" class="departure">
+                <td class="time">19:32</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="19:44" data-destination="MJ" class="departure">
+                <td class="time">19:44</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="20:07" data-destination="THB" class="departure">
+                <td class="time">20:07</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="20:14" data-destination="PRP" class="departure">
+                <td class="time">20:14</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="20:33" data-destination="THB" class="departure">
+                <td class="time">20:33</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="20:34" data-destination="PRP" class="departure">
+                <td class="time">20:34</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="20:42" data-destination="THB" class="departure">
+                <td class="time">20:42</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="20:44" data-destination="MJ" class="departure">
+                <td class="time">20:44</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="21:07" data-destination="THB" class="departure">
+                <td class="time">21:07</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="21:14" data-destination="PRP" class="departure">
+                <td class="time">21:14</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="21:26" data-destination="THB" class="departure">
+                <td class="time">21:26</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="21:34" data-destination="PRP" class="departure">
+                <td class="time">21:34</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="21:37" data-destination="THB" class="departure">
+                <td class="time">21:37</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="21:44" data-destination="MJ" class="departure">
+                <td class="time">21:44</td>
+                <td class="dest">Maja</td>
+              </tr>
+              <tr data-time="21:59" data-destination="PRP" class="departure">
+                <td class="time">21:59</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="22:07" data-destination="THB" class="departure">
+                <td class="time">22:07</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="22:24" data-destination="PRP" class="departure">
+                <td class="time">22:24</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="22:26" data-destination="SRP" class="departure">
+                <td class="time">22:26</td>
+                <td class="dest">Serpong</td>
+              </tr>
+              <tr data-time="22:34" data-destination="PRP" class="departure">
+                <td class="time">22:34</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="22:37" data-destination="THB" class="departure">
+                <td class="time">22:37</td>
+                <td class="dest">Tanah Abang</td>
+              </tr>
+              <tr data-time="22:44" data-destination="PRP" class="departure">
+                <td class="time">22:44</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="23:24" data-destination="PRP" class="departure">
+                <td class="time">23:24</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+              <tr data-time="23:44" data-destination="PRP" class="departure">
+                <td class="time">23:44</td>
+                <td class="dest">Parung Panjang</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="../js/timetable.js"></script>
+  </body>
+</html>

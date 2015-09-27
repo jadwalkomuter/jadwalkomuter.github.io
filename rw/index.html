@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="id" manifest="../cache.appcache">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Rawa Buaya | jadwalkomuter</title>
+  </head>
+  <body data-station-key="RW">
+    <nav class="navbar navbar-dark navbar-fixed-top bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">jadwal<strong>komuter</strong></a>
+      </div>
+    </nav>
+    <div class="container main">
+      <div class="timetable-title">
+        <h1>Rawa Buaya</h1>
+      </div>
+
+      <div class="row">
+        <aside class="col-md-6 col-lg-4 col-xs-12 station-toggle-container">
+          <div class="card" id="destination-selector">
+            <form>
+              <div class="card-header">
+                Pilih stasiun tujuan:
+              </div>
+              <ul class="list-group list-group-flush" id="destination-toggles">
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="DU"> Duri</label>
+                </li>
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="TNG"> Tangerang</label>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </aside>
+
+        <div class="col-md-6 col-lg-8 col-xs-12 ">
+          <table class="table" id="timetable">
+            <thead>
+              <tr>
+                <th class="time">Waktu</th>
+                <th class="dest">Tujuan</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td colspan="2" id="show-previous">Tampilkan selengkapnya</td>
+            </tr>
+            </tbody>
+            <tbody id="upcoming">
+              <tr data-time="05:16" data-destination="DU" class="departure">
+                <td class="time">05:16</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="05:31" data-destination="DU" class="departure">
+                <td class="time">05:31</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="05:46" data-destination="DU" class="departure">
+                <td class="time">05:46</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="06:01" data-destination="DU" class="departure">
+                <td class="time">06:01</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="06:10" data-destination="TNG" class="departure">
+                <td class="time">06:10</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="06:16" data-destination="DU" class="departure">
+                <td class="time">06:16</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="06:25" data-destination="TNG" class="departure">
+                <td class="time">06:25</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="06:31" data-destination="DU" class="departure">
+                <td class="time">06:31</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="06:40" data-destination="TNG" class="departure">
+                <td class="time">06:40</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="06:46" data-destination="DU" class="departure">
+                <td class="time">06:46</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="06:55" data-destination="TNG" class="departure">
+                <td class="time">06:55</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="07:01" data-destination="DU" class="departure">
+                <td class="time">07:01</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="07:10" data-destination="TNG" class="departure">
+                <td class="time">07:10</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="07:16" data-destination="DU" class="departure">
+                <td class="time">07:16</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="07:31" data-destination="DU" class="departure">
+                <td class="time">07:31</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="07:40" data-destination="TNG" class="departure">
+                <td class="time">07:40</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="07:46" data-destination="DU" class="departure">
+                <td class="time">07:46</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="07:55" data-destination="TNG" class="departure">
+                <td class="time">07:55</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="08:01" data-destination="DU" class="departure">
+                <td class="time">08:01</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="08:10" data-destination="TNG" class="departure">
+                <td class="time">08:10</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="08:16" data-destination="DU" class="departure">
+                <td class="time">08:16</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="08:25" data-destination="TNG" class="departure">
+                <td class="time">08:25</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="08:31" data-destination="DU" class="departure">
+                <td class="time">08:31</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="08:40" data-destination="TNG" class="departure">
+                <td class="time">08:40</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="08:46" data-destination="DU" class="departure">
+                <td class="time">08:46</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="09:01" data-destination="DU" class="departure">
+                <td class="time">09:01</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="09:10" data-destination="TNG" class="departure">
+                <td class="time">09:10</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="09:16" data-destination="DU" class="departure">
+                <td class="time">09:16</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="09:25" data-destination="TNG" class="departure">
+                <td class="time">09:25</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="09:31" data-destination="DU" class="departure">
+                <td class="time">09:31</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="09:40" data-destination="TNG" class="departure">
+                <td class="time">09:40</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="09:46" data-destination="DU" class="departure">
+                <td class="time">09:46</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="09:55" data-destination="TNG" class="departure">
+                <td class="time">09:55</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="10:01" data-destination="DU" class="departure">
+                <td class="time">10:01</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="10:10" data-destination="TNG" class="departure">
+                <td class="time">10:10</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="10:16" data-destination="DU" class="departure">
+                <td class="time">10:16</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="10:31" data-destination="DU" class="departure">
+                <td class="time">10:31</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="10:40" data-destination="TNG" class="departure">
+                <td class="time">10:40</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="10:46" data-destination="DU" class="departure">
+                <td class="time">10:46</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="10:55" data-destination="TNG" class="departure">
+                <td class="time">10:55</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="11:01" data-destination="DU" class="departure">
+                <td class="time">11:01</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="11:10" data-destination="TNG" class="departure">
+                <td class="time">11:10</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="11:16" data-destination="DU" class="departure">
+                <td class="time">11:16</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="11:25" data-destination="TNG" class="departure">
+                <td class="time">11:25</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="11:31" data-destination="DU" class="departure">
+                <td class="time">11:31</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="11:46" data-destination="DU" class="departure">
+                <td class="time">11:46</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="11:47" data-destination="TNG" class="departure">
+                <td class="time">11:47</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="12:01" data-destination="DU" class="departure">
+                <td class="time">12:01</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="12:16" data-destination="DU" class="departure">
+                <td class="time">12:16</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="12:25" data-destination="TNG" class="departure">
+                <td class="time">12:25</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="12:36" data-destination="DU" class="departure">
+                <td class="time">12:36</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="12:40" data-destination="TNG" class="departure">
+                <td class="time">12:40</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="12:51" data-destination="DU" class="departure">
+                <td class="time">12:51</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="12:55" data-destination="TNG" class="departure">
+                <td class="time">12:55</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="13:06" data-destination="DU" class="departure">
+                <td class="time">13:06</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="13:15" data-destination="TNG" class="departure">
+                <td class="time">13:15</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="13:21" data-destination="DU" class="departure">
+                <td class="time">13:21</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="13:36" data-destination="DU" class="departure">
+                <td class="time">13:36</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="13:45" data-destination="TNG" class="departure">
+                <td class="time">13:45</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="13:56" data-destination="DU" class="departure">
+                <td class="time">13:56</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="14:00" data-destination="TNG" class="departure">
+                <td class="time">14:00</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="14:11" data-destination="DU" class="departure">
+                <td class="time">14:11</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="14:15" data-destination="TNG" class="departure">
+                <td class="time">14:15</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="14:26" data-destination="DU" class="departure">
+                <td class="time">14:26</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="14:35" data-destination="TNG" class="departure">
+                <td class="time">14:35</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="14:41" data-destination="DU" class="departure">
+                <td class="time">14:41</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="14:56" data-destination="DU" class="departure">
+                <td class="time">14:56</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="15:05" data-destination="TNG" class="departure">
+                <td class="time">15:05</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="15:16" data-destination="DU" class="departure">
+                <td class="time">15:16</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="15:20" data-destination="TNG" class="departure">
+                <td class="time">15:20</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="15:31" data-destination="DU" class="departure">
+                <td class="time">15:31</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="15:35" data-destination="TNG" class="departure">
+                <td class="time">15:35</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="15:48" data-destination="DU" class="departure">
+                <td class="time">15:48</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="15:55" data-destination="TNG" class="departure">
+                <td class="time">15:55</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="16:03" data-destination="DU" class="departure">
+                <td class="time">16:03</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="16:21" data-destination="DU" class="departure">
+                <td class="time">16:21</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="16:30" data-destination="TNG" class="departure">
+                <td class="time">16:30</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="16:41" data-destination="DU" class="departure">
+                <td class="time">16:41</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="17:00" data-destination="TNG" class="departure">
+                <td class="time">17:00</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="17:06" data-destination="DU" class="departure">
+                <td class="time">17:06</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="17:15" data-destination="TNG" class="departure">
+                <td class="time">17:15</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="17:21" data-destination="DU" class="departure">
+                <td class="time">17:21</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="17:36" data-destination="DU" class="departure">
+                <td class="time">17:36</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="17:51" data-destination="DU" class="departure">
+                <td class="time">17:51</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="18:00" data-destination="TNG" class="departure">
+                <td class="time">18:00</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="18:06" data-destination="DU" class="departure">
+                <td class="time">18:06</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="18:21" data-destination="DU" class="departure">
+                <td class="time">18:21</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="18:30" data-destination="TNG" class="departure">
+                <td class="time">18:30</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="18:36" data-destination="DU" class="departure">
+                <td class="time">18:36</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="18:51" data-destination="DU" class="departure">
+                <td class="time">18:51</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="19:00" data-destination="TNG" class="departure">
+                <td class="time">19:00</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="19:06" data-destination="DU" class="departure">
+                <td class="time">19:06</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="19:21" data-destination="DU" class="departure">
+                <td class="time">19:21</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="19:30" data-destination="TNG" class="departure">
+                <td class="time">19:30</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="19:36" data-destination="DU" class="departure">
+                <td class="time">19:36</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="19:45" data-destination="TNG" class="departure">
+                <td class="time">19:45</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="19:51" data-destination="DU" class="departure">
+                <td class="time">19:51</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="20:00" data-destination="TNG" class="departure">
+                <td class="time">20:00</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="20:06" data-destination="DU" class="departure">
+                <td class="time">20:06</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="20:15" data-destination="TNG" class="departure">
+                <td class="time">20:15</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="20:21" data-destination="DU" class="departure">
+                <td class="time">20:21</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="20:30" data-destination="TNG" class="departure">
+                <td class="time">20:30</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="20:36" data-destination="DU" class="departure">
+                <td class="time">20:36</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="20:51" data-destination="DU" class="departure">
+                <td class="time">20:51</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="21:00" data-destination="TNG" class="departure">
+                <td class="time">21:00</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="21:06" data-destination="DU" class="departure">
+                <td class="time">21:06</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="21:15" data-destination="TNG" class="departure">
+                <td class="time">21:15</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="21:21" data-destination="DU" class="departure">
+                <td class="time">21:21</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="21:30" data-destination="TNG" class="departure">
+                <td class="time">21:30</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="21:36" data-destination="DU" class="departure">
+                <td class="time">21:36</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="21:45" data-destination="TNG" class="departure">
+                <td class="time">21:45</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="21:51" data-destination="DU" class="departure">
+                <td class="time">21:51</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="22:00" data-destination="TNG" class="departure">
+                <td class="time">22:00</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="22:11" data-destination="DU" class="departure">
+                <td class="time">22:11</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="22:35" data-destination="TNG" class="departure">
+                <td class="time">22:35</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+              <tr data-time="22:36" data-destination="DU" class="departure">
+                <td class="time">22:36</td>
+                <td class="dest">Duri</td>
+              </tr>
+              <tr data-time="22:55" data-destination="TNG" class="departure">
+                <td class="time">22:55</td>
+                <td class="dest">Tangerang</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="../js/timetable.js"></script>
+  </body>
+</html>

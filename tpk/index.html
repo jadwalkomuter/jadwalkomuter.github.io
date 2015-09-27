@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id" manifest="../cache.appcache">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Tanjung Priuk | jadwalkomuter</title>
+  </head>
+  <body data-station-key="TPK">
+    <nav class="navbar navbar-dark navbar-fixed-top bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">jadwal<strong>komuter</strong></a>
+      </div>
+    </nav>
+    <div class="container main">
+      <div class="timetable-title">
+        <h1>Tanjung Priuk</h1>
+      </div>
+
+      <div class="row">
+        <aside class="col-md-6 col-lg-4 col-xs-12 station-toggle-container">
+          <div class="card" id="destination-selector">
+            <form>
+              <div class="card-header">
+                Pilih stasiun tujuan:
+              </div>
+              <ul class="list-group list-group-flush" id="destination-toggles">
+                <li class="list-group-item checkbox">
+                  <label><input type="checkbox" data-destination="JAK"> Jakarta Kota</label>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </aside>
+
+        <div class="col-md-6 col-lg-8 col-xs-12 ">
+          <table class="table" id="timetable">
+            <thead>
+              <tr>
+                <th class="time">Waktu</th>
+                <th class="dest">Tujuan</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td colspan="2" id="show-previous">Tampilkan selengkapnya</td>
+            </tr>
+            </tbody>
+            <tbody id="upcoming">
+              <tr data-time="06:35" data-destination="JAK" class="departure">
+                <td class="time">06:35</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="07:15" data-destination="JAK" class="departure">
+                <td class="time">07:15</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="07:55" data-destination="JAK" class="departure">
+                <td class="time">07:55</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="08:35" data-destination="JAK" class="departure">
+                <td class="time">08:35</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="09:10" data-destination="JAK" class="departure">
+                <td class="time">09:10</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="09:50" data-destination="JAK" class="departure">
+                <td class="time">09:50</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="10:30" data-destination="JAK" class="departure">
+                <td class="time">10:30</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="11:10" data-destination="JAK" class="departure">
+                <td class="time">11:10</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="11:50" data-destination="JAK" class="departure">
+                <td class="time">11:50</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="12:30" data-destination="JAK" class="departure">
+                <td class="time">12:30</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="13:15" data-destination="JAK" class="departure">
+                <td class="time">13:15</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="13:55" data-destination="JAK" class="departure">
+                <td class="time">13:55</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="14:32" data-destination="JAK" class="departure">
+                <td class="time">14:32</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="15:10" data-destination="JAK" class="departure">
+                <td class="time">15:10</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="15:50" data-destination="JAK" class="departure">
+                <td class="time">15:50</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="16:30" data-destination="JAK" class="departure">
+                <td class="time">16:30</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="17:10" data-destination="JAK" class="departure">
+                <td class="time">17:10</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="17:50" data-destination="JAK" class="departure">
+                <td class="time">17:50</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="18:30" data-destination="JAK" class="departure">
+                <td class="time">18:30</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="19:00" data-destination="JAK" class="departure">
+                <td class="time">19:00</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+              <tr data-time="20:00" data-destination="JAK" class="departure">
+                <td class="time">20:00</td>
+                <td class="dest">Jakarta Kota</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="../js/timetable.js"></script>
+  </body>
+</html>
