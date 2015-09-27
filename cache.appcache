@@ -2,13 +2,19 @@ CACHE MANIFEST
 
 # Allows the webapp to be loaded offline.
 # The following comment needs to be updated to update the cache.
-# Last updated: 2015-09-27T15:30:54.417Z
+# Last updated: 2015-09-27T16:22:56.551Z
 
+CACHE:
 # Assets
 css/style.css
 js/timetable.js
 js/index.js
-
+fonts/fontawesome-webfont.eot
+fonts/fontawesome-webfont.svg
+fonts/fontawesome-webfont.ttf
+fonts/fontawesome-webfont.woff
+fonts/fontawesome-webfont.woff2
+fonts/FontAwesome.otf
 # Pages
 index.html
 ancol/
@@ -311,3 +317,6 @@ universitaspancasila/
 universitaspancasila/index.html
 up/
 up/index.html
+
+NETWORK:
+*
